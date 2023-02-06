@@ -1,0 +1,82 @@
+b,
+b:before,
+b:after {
+  display: block;
+  border-radius: 50%;
+  filter: blur(1px);
+  filter: blur(8px);
+}
+
+b {
+  width: 30vmin;
+  height: 31vmin;
+  box-shadow: 1vmin 0 3vmin 2vmin #f50, inset -1vmin 0 3vmin 4vmin rgb(17, 9, 1),
+    -4vmin 0 10vmin 0 #f60;
+  animation: bh 1s linear infinite;
+}
+
+@keyframes bh {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+b:before,
+b:after {
+  content: "";
+  background: white;
+  position: relative;
+  top: 6vmin;
+}
+
+b:before {
+  width: 1vmin;
+  height: 1.5vmin;
+  left: 25vmin;
+  box-shadow: yellow 0 0 2vmin 2vmin, yellow 2vmin 4vmin 2vmin 0.5vmin;
+}
+
+b:after {
+  width: 38vmin;
+  height: 38vmin;
+  opacity: 0.03;
+  left: -14vmin;
+}
+
+.black-hole-name {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #fff;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.no-planet-name {
+  display: none;
+}
+
+.black-hole-name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1150px) {
+  b {
+    width: 35vmin;
+    height: 36vmin;
+    box-shadow: 1vmin 0 3vmin 2vmin #f50,
+      inset -1vmin 0 3vmin 4vmin rgb(17, 9, 1),
+      -4vmin 0 20vmin 0 rgb(128, 10, 10);
+    animation: bh 5s linear infinite;
+  }
+
+  b:before {
+    width: 1vmin;
+    height: 3vmin;
+    left: 35vmin;
+    box-shadow: yellow 0 0 2vmin 2vmin, yellow 2vmin 4vmin 2vmin 0.5vmin;
+  }
+}

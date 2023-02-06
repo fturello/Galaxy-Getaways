@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  align-self: center;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: #ffffff5d 3px 3px 50px;
+  animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(240, 11%, 95%);
+    text-shadow:
+      0 0 1em hsla(186, 100%, 50%, 0.2),
+      0 0 0.125em hsla(228, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(240, 11%, 95%);
+    text-shadow:
+      0 0 1em hsla(196, 100%, 50%, 0.5),
+      0 0 0.125em hsla(219, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(231, 24%, 94%);
+    text-shadow:
+      0 0 1em hsla(194, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 43%, 97%);
+    text-shadow:
+      0 0 1em hsla(202, 100%, 50%, 0.5),
+      0 0 0.125em hsla(208, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(240, 17%, 98%);
+    text-shadow:
+      0 0 1em hsla(187, 100%, 50%, 0.2),
+      0 0 0.125em hsla(228, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+}
+
+.slogan {
+  align-self: center;
+  text-align: center;
+  color: #7d7d7d;
+  margin-top: 1rem;
+  z-index: 200;
+  font-size: 1.6rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: lighter;
+}
+
+.hide-things {
+  animation: fadeOut 2500ms;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.btn-redirect {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  height: 6%;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 1.2em 1.3em 1.2em 0.9em;
+  border: 3px solid #0b073d;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  color: white;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+.btn-redirect svg {
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.btn-redirect span {
+  margin-left: 15px;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  letter-spacing: 0.1em;
+}
+
+.btn-redirect:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.btn-redirect:hover span {
+  transform: translateX(7px);
+}
+
+.rocket {
+  width: 230px;
+  position: relative;
+  z-index: 3;
+}
+
+.rocket-wrapper {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  top: 380px;
+  transition: 4s ease;
+  pointer-events: none;
+}
+
+.rocket-launched {
+  visibility: visible;
+  transform: translateY(-1200px);
+}
+
+.rocket-launched .flame-wrapper {
+  opacity: 1 !important;
+}
+
+.rocket-wrapper .flame-wrapper {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  left: 50%;
+  transform: scaleY(-1) translateX(-40px);
+  bottom: 46px;
+  opacity: 0;
+  transition: 250ms ease;
+}
+
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-radius: 50% 0% 50% 50%;
+  transform: rotate(-45deg);
+}
+
+.red {
+  width: 80px;
+  height: 80px;
+  background: orangered;
+  box-shadow: 0px 0px 10px 5px orangered;
+}
+
+.orange {
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  background: orange;
+  box-shadow: 0px 0px 12px 6px orange;
+}
+
+.gold {
+  left: 18px;
+  width: 45px;
+  height: 45px;
+  background: gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+
+.white {
+  left: 22px;
+  width: 35px;
+  height: 35px;
+  background: lightyellow;
+  box-shadow: 0px 0px 9px 4px lightyellow;
+}
+
+.flame-anim {
+  position: relative;
+  animation: flicker 3ms ease-in infinite;
+}
+
+.earth {
+  align-self: center;
+  margin-top: 5rem;
+  height: 100%;
+  width: 80%;
+  z-index: 200;
+  filter: drop-shadow(0px 0px 30px rgba(5, 0, 165, 0.2));
+}
+
+@media screen and (min-width: 900px) {
+  .btn-redirect {
+    padding: 0.8em 1.3em 0.8em 0.9em;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .slogan {
+    font-size: 2rem;
+  }
+}

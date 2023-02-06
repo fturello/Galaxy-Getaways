@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap%27%22");
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Rockets-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 3rem;
+  box-shadow: 0 15px 25px rgba(241, 235, 235, 0.050);
+  z-index: 0;
+}
+
+.Rockets-title {
+  color: #efefefe9;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 3.5rem;
+  margin: 2rem;
+}
+
+.Rockets-desc {
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin: 1.5rem;
+}
+
+.Rockets-list {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3rem;
+  list-style: none;
+}
+
+.Rockets-1 {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.Rockets-1-name {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: x-large;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 0.8rem;
+}
+
+img.Rockets-1-img {
+  margin: 2rem;
+  height: auto;
+  width: 24rem;
+}
